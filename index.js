@@ -23,4 +23,12 @@ app.get('/ola/:nome', (req, res) => {
   res.send('ola, ' + nome)
 })
 
+app.get('/youtube', (req, res) => {
+  const canal = req.query["canal"]
+
+  canal ? res.send("canal: "+ canal) : res.send('Não selecionou canal');
+
+  
+})
+
 app.listen(port, () => console.log(`started`));
